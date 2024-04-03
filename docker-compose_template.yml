@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+    business:
+      build:
+        context: ./business
+        dockerfile: Dockerfile
+      ports:
+        - 8180:8180
+      environment:
+        - POSTGRES_HOST=db.postgres
+        - POSTGRES_PORT=
+        - POSTGRES_DATABASE=postgres
+        - POSTGRES_SCHEMA=public
+        - POSTGRES_USER={{db_username}}
+        - POSTGRES_PASSWORD={{db_psw}}
+        - POSTGRES_SYNCH=update
+    db.postgres:
+      image: postgres:14.4
+      volumes:
+        - postgres_volume:/var/lib/postgresql/data
+      ports:
+        - "5434:5432"
+      environment:
+        POSTGRES_PASSWORD: {{db_psw}}
+volumes:
+    postgres_volume:
+        driver: local
+        driver_opts:
+          type: none
+          o: bind
+          device: {{pg_base_dir}}

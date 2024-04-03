@@ -1,0 +1,8 @@
+example: BgtCategoryEntity - BgtSubCategoryEntity
+
+[ ] - create Entity class in /model/
+[ ] - create Repository Dao interface in /jpa/
+[ ] - define starting values in InitDatabaseValues.java
+[ ] - create Service class in /services/
+[ ] - define insert algorithm into the service
+[ ] - call init method in InitDatabaseService.java

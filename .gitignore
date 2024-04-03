@@ -1,0 +1,11 @@
+/.metadata/
+/.idea
+/.vscode
+
+/business/.mvn
+
+/business/src/main/resources
+
+/business/mvnw*
+
+docker-compose.yml
