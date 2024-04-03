@@ -9,3 +9,11 @@
 /business/mvnw*
 
 docker-compose.yml
+
+/business/.classpath
+/business/.factorypath
+/business/.project
+/business/HELP.md
+/business/.settings
+/business/target
+/business/.vscode
