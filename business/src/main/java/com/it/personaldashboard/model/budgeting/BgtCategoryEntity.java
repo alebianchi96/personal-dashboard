@@ -32,7 +32,14 @@ public class BgtCategoryEntity extends Model {
     private Nature nature;
 
     public enum Nature {
-        COST_OP, COST_PLAN, REVENUES
+        COST_OP, COST_PLAN, REVENUES;
+
+        public static String getLabel(String name) {
+            if(COST_OP.name().equalsIgnoreCase(name)) { return "Costi operativi"; }
+            else if(COST_PLAN.name().equalsIgnoreCase(name)) { return "Costi pianificati"; }
+            else if(REVENUES.name().equalsIgnoreCase(name)) { return "Ricavi"; }
+            return "";
+        }
     }
 
     // Getters and setters for the fields
