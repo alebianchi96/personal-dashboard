@@ -17,3 +17,7 @@ docker-compose.yml
 /business/.settings
 /business/target
 /business/.vscode
+
+/.sonarlint
+
+node_modules
